@@ -9,7 +9,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y cmake ninja-build unzip
       - run: |
           unzip idasdk.zip
-          mv ida95-sdk-main idasdk
+          mv ida-sdk-main idasdk
       - run: |
           cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -B build
           cmake --build build
