@@ -18,7 +18,10 @@ jobs:
           cmake --build build
         env:
           IDASDK: ${{ github.workspace }}/idasdk/src
+      - name: Find the plugin
+        run: find build -name "*.so" -ls
       - uses: actions/upload-artifact@v4
         with:
           name: chernobog-plugin
-          path: build/chernobog.so
+          path: build/**/*.so
+          if-no-files-found: error
