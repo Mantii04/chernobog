@@ -322,7 +322,7 @@ find_package(idasdk REQUIRED)
 # That is the oldest IDA one binary supports. The same binary connects to the IDA 9.4 and 9.5
 # decompilers (src/common/hexrays_abi.hpp). Caller-owned IDASDK overrides must still resolve to the
 # 9.4 kernel ABI; Windows CI additionally rejects imports introduced by later SDK patches.
-set(CHERNOBOG_REQUIRED_IDA_SDK_VERSION 940)
+set(CHERNOBOG_REQUIRED_IDA_SDK_VERSION 950)
 set(CHERNOBOG_HEXRAYS_MAGIC_94 "00DEC0DE00000005")
 set(CHERNOBOG_HEXRAYS_MAGIC_95 "00DEC0DE00000006")
 if(NOT DEFINED IDASDK OR NOT EXISTS "${IDASDK}/include/pro.h")
