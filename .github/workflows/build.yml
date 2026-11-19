@@ -16,7 +16,7 @@ jobs:
           cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -B build
           cmake --build build
         env:
-          IDASDK: ${{ github.workspace }}/idasdk
+          IDASDK: ${{ github.workspace }}/idasdk/src
       - uses: actions/upload-artifact@v4
         with:
           name: chernobog-plugin
