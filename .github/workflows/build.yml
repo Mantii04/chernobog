@@ -8,7 +8,6 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - run: sudo apt-get update && sudo apt-get install -y cmake ninja-build unzip
       - run: |
-          curl -H "Authorization: Bearer ${{ secrets.SDK_TOKEN }}" -L -o idasdk.zip https://github.com/Mantii04/ida-sdk-private/releases/download/v1.0/idasdk.zip
           unzip idasdk.zip
           mv ida95-sdk-main idasdk
       - run: |
